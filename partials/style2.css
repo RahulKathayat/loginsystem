@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+#dismissingalert{
+    text-align: center;
+    background-color: lightgreen;
+}
+#dismissingalert2{
+    text-align: center;
+    background-color: crimson;
+}
+.btn-close{
+    width: 18px;
+    height: 18px;
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+
+/* login */
+
+.login {
+    color: white;
+    background:  #136a8a;
+    background: 
+      -webkit-linear-gradient(to right, #267871, #136a8a);
+    background: 
+      linear-gradient(to right, #267871, #136a8a);
+    margin: auto;
+    box-shadow: 
+      0px 2px 10px rgba(0,0,0,0.2), 
+      0px 10px 20px rgba(0,0,0,0.3), 
+      0px 30px 60px 1px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 50px;
+    width: 500px;
+}
+.login_box{
+    padding: 50px;
+}
+.login .head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login .head .company {
+    padding: 10px;
+    font-size: 2.2em;
+}
+.login .msg {
+    text-align: center;
+}
+.login .form input[type=text].text {
+    border: none;
+    background: none;
+    box-shadow: 0px 2px 0px 0px white;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    outline: none;
+}
+.login .form .text::placeholder {
+    color: #D3D3D3;
+}
+.login .form input[type=password].password {
+    border: none;
+    background: none;
+    box-shadow: 0px 2px 0px 0px white;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    outline: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.login .form input[type=password].cpassword {
+    border: none;
+    background: none;
+    box-shadow: 0px 2px 0px 0px white;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    outline: none;
+    margin-bottom: 20px;
+}
+.login .form .password::placeholder {
+    color: #D3D3D3;
+}
+.login .form .cpassword::placeholder {
+    color: #D3D3D3;
+}
+.login .form .btn-login {
+    background: none;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0px 0px 0px 2px white;
+    border-radius: 3px;
+    padding: 5px 2em;
+    transition: 0.5s;
+}
+.login .form .btn-login:hover {
+    background: white;
+    color: dimgray;
+    transition: 0.5s;
+}
+.form{
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+/* ======== navbar code ========= */
+.header{
+    background-color: #b498c3;
+    box-shadow: 0 0 2px grey;
+    position: sticky;
+    top:0%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.navbar img {
+    width: 85px;
+    padding: 0 12px;
+}
+
+.select_country {
+    width: 250px;
+    margin-left: 70px;
+}
+.select i{
+    font-size: 15px;
+    transition: all 0.3s;
+}
+.select{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+.option{
+    display: flex;
+    padding: 10px;
+    width: 250 px;
+    cursor: pointer;
+}
+.option:hover{
+    background-color: #c7dcff;
+}
+.option p{
+    padding: 0px 10px;
+    color: rgb(122, 131, 133);
+}
+.option i{
+    color: rgb(170, 166, 146);
+}
+.option_box{
+    box-shadow: 0 0 10px grey;
+    background-color: white;
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+.hidden{
+    display: block;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.search_box{
+    display: flex;
+    margin-left: 30px;
+}
+.search_box i{
+    background-color: black;
+    color: white;
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+.search_class{
+    padding: 10px;
+    width: 400px;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 6px 0 0 6px;
+}
+#eng_tag{
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 25px;
+}
+.hin_eng{
+    background-color: white;
+    box-shadow: 0 0 10px;
+    width: 130px;
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+.hin_eng li{
+    list-style: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.hin_eng li:hover{
+    background-color: #c7dcff;
+}
+.display_div{
+    display: block;
+}
+.message , .bell i{
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 25px;
+}
+.client_img img{
+    width: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 55px;
+}
+.nameandimg img{
+    width: 65px;
+    border-radius: 50%;
+}
+.nameandimg p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.nameandimg{
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px 0;
+}
+.drop_down{
+    width: 250px;
+    box-shadow: 0 0 10px grey;
+    padding: 15px;
+    background-color: white;
+    display: none;
+    position: absolute;
+    top: 50px;
+}
+.drop_down ul li{
+    display: flex;
+    padding: 10px;
+    margin-top: 5px ;
+    cursor: pointer;
+}
+.drop_down ul li:hover{
+    background-color: #c7dcff;
+}
+.drop_down ul {
+    margin-top: 20px;
+}
+.drop_down ul li i {
+    color:black;
+    font-size: 17px;
+    padding-right: 8px;
+}
+.drop_down ul li{
+    margin-left: 10px;
+    font-size: 17px;
+}
+.block_div{
+    display: block;
+}
+.selling_page button{
+    margin-left: 25px;
+    border-style: solid;
+    border-width: 5px;
+    border-top-color: #23e5db ;
+    border-left-color: #ffce32 ;
+    border-right-color: #3a77ff ;
+    border-bottom-color: #3a77ff ;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+}
+
+
+/* ================ad1=============== */
+.ad_img img{
+    width: 800px;
+    position: relative;
+    z-index: -1;
+}
+.ad_img{
+    width: 800px;
+    margin: auto;
+    margin-top: 35px;
+    height: 200px;
+    position: relative;
+}
+.ad_img i{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* product */
+.first_row{
+    display: flex;
+    justify-content: space-evenly;
+    width: 1200px;
+    margin: auto;
+    margin-top: 35px;
+}
+.box img{
+    width: 250px;
+}
+.box{
+    border: 3px solid rgb(138, 137, 139);
+    width: 260px;
+    height: 230;
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+}
+.box:hover{
+    border: 3px solid rgb(197, 196, 196);
+    border-radius: 5px 5px 5px 5px;
+}
+.box a{
+    text-decoration: none;
+    color: black;
+}
+.box h2{
+    padding: 5px 0 0 20px;
+}
+.box p{
+    padding: 0 0 10px 20px;
+    color: #6f8a94;
+    font-size: 16px;
+}
+.address_data{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.address_data p{
+    font-size: 14px;
+    margin-right: 10px;
+}
+/* load more product */
+.load_more button{
+    margin: 50px auto;
+    padding: 8px 16px ;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    transition: all 0.3s;
+    border: 2px solid black;
+}
+.load_more button:hover{
+    border: 4px solid black;
+    
+}
+#load_more_products_id{
+    display: none;
+}
+/* download */
+.download_app{
+    background-color:#f7f8f9 ;
+}
+.download{
+    margin: 100px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+._image{
+    width: 400px;
+}
+.text{
+    border-right: 2px solid rgb(104, 88, 88);
+}
+.text h1{
+    padding: 20px 20px 10px 20px;
+    font-size: 35px ;
+}
+.text p{
+    padding: 10px 20px 20px 20px;
+    font-size: 20px ;
+}
+.download_store p{
+    padding: 20px 20px 20px 0;
+    font-weight: bold;
+    font-size: 17px;
+}
+.download_store {
+    padding-left: 30px;
+}
+.download_store img{
+    width: 140px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+/* footer */
+.main_footer{
+    background-color: #ebeeef;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    margin: auto;
+}
+.footer_box h2{
+    font-size: 17px;
+    margin: 10px 0 15px 0;
+    cursor: pointer;
+}
+.footer_box p{
+    margin: 8px 0 8px 0;
+    cursor: pointer;
+}

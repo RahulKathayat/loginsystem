@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Seller</title>
+    <link rel="stylesheet" href="chat_box2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- ========= navbar code ============-->
+    <div class="header">
+        <div class="navbar">
+            <a href="\loginsystem\welcome.php"><img src="images/logo.png" alt="logo"></a>
+            <div class="select_country" id="country">
+                <div class="select">
+                    <p id="text">Select your country</p>
+                    <i class="fa-solid fa-chevron-down" id="moving"></i>
+                </div>
+                <ul class="option_box" id="list">
+                    <li class="option" onclick="myfunction('India')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>India</p>
+                    </li>
+                    <li class="option" onclick="myfunction('USA')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>USA</p>
+                    </li>
+                    <li class="option" onclick="myfunction('China')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>China</p>
+                    </li>
+                    <li class="option" onclick="myfunction('Brazil')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Brazil</p>
+                    </li>
+                    <li class="option" onclick="myfunction('Australia')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Australia</p>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <div class="search_box">
+                <input type="text" class="search_class" id="search_id"
+                    placeholder="Find Cars, Mobile Phones and more...">
+                <p><i class="fa-solid fa-magnifying-glass"></i></p>
+            </div>
+
+            <div class="language">
+                <p id="eng_tag">English</p>
+                <ul class="hin_eng">
+                    <li onclick="languageolx('हिन्दी')">हिन्दी</li>
+                    <li onclick="languageolx('English')">English</li>
+                </ul>
+            </div>
+
+            <div class="message">
+                <a href="chat_box.html"><i class="fa-regular fa-comment"></i></a>
+            </div>
+
+            <div class="bell">
+                <i class="fa-regular fa-bell"></i>
+            </div>
+
+            <div class="your_logo">
+                <div class="client_img" id="client_img_id">
+                    <img src="images/pic3.jpg" alt="">
+                </div>
+
+                <div class="drop_down" id="dropdown_id">
+                    <div class="nameandimg">
+                        <img src="images/pic3.jpg" alt="">
+                        <p>Login</p>
+                    </div>
+                    <ul>
+                    <a href="\loginsystem\signup.php">
+                        <li>
+                            <i class="fa-regular fa-user"></i>
+                            <p> Sign Up</p>
+                        </li>
+                    </a>
+                    <a href="\loginsystem\login.php">
+                        <li>
+                            <i class="fa-solid fa-box"></i>
+                            <p> Login</p>
+                        </li>
+                    </a>
+                        <hr>
+                        <li>
+                            <i class="fa-solid fa-circle-question"></i>
+                            <p> Help</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-gear"></i>
+                            <p> Settings</p>
+                        </li>
+                        <hr>
+                    <a href="\loginsystem\logout.php">
+                        <li>
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <p> Log Out</p>
+                        </li>
+                    </a>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="selling_page">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button>
+                    <i class="fa-solid fa-plus"></i>
+                    <p>SELL</p>
+                </button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- chatbox -->
+    <div class="chat_box">
+        <div class="heading_chat_box">
+            <div class="img_name_chat">
+                <img src="images/pic2.jpg">
+                <h2>Lord Puneet</h2>
+            </div>
+            <a href="\loginsystem\welcome.php"><i class="fa-solid fa-x"></i></a>
+        </div>
+
+    <div class="see_chat">
+        <h3 id="message"></h3>
+    </div>
+    <div class="send_message">
+        <input type="text" placeholder="Type a message..." id="text_message">
+        <input type="text" placeholder="Type a message..." id="demo">
+        <i class="fa-solid fa-paper-plane" id="send_icon"></i>
+    </div>
+</div>
+
+
+    <script>
+
+        //  ======== navbar code ========= 
+        let country = document.getElementById('country');
+        let moving = document.getElementById('moving');
+        let text = document.getElementById('text');
+        let list = document.getElementById('list');
+
+        country.addEventListener('click', () => {
+            list.classList.toggle('hidden')
+            moving.classList.toggle('rotate')
+        });
+        function myfunction(variable) {
+            text.innerHTML = variable;
+        }
+
+        let eng_tag = document.getElementById('eng_tag');
+        let hin_tag = document.querySelector('.hin_eng');
+        let language = document.querySelector('.language');
+        language.addEventListener('click', () => {
+            hin_tag.classList.toggle('display_div');
+        });
+
+        function languageolx(variable) {
+            eng_tag.innerHTML = variable;
+        }
+
+        let client_img_id = document.getElementById('client_img_id');
+        let dropdown_id = document.getElementById('dropdown_id');
+        client_img_id.addEventListener('click', () => {
+            dropdown_id.classList.toggle('block_div')
+        });
+
+        // chat box 
+
+        let send_icon=document.getElementById('send_icon');
+        let message=document.getElementById('message');
+        let text_message=document.getElementById('text_message');
+        let demo=document.getElementById('demo');
+
+        send_icon.addEventListener('click',()=>{
+            message.innerHTML=text_message.value;
+            message.style='display:block';
+            text_message.value=demo.value;
+        });
+    </script>
+</body>
+
+</html>
